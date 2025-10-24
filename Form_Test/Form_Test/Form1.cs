@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -32,17 +33,22 @@ namespace Form_Test
                     //ボタン内のテキスト設定
                     testButton.Text = "ボタン";
 
+                    testButton.MouseHover += hogehogeClick;
+
                     //コントロールにボタンを追加
                     Controls.Add(testButton);
-
-
+                    
                 }
             }
         }
 
+        private void hogehogeClick(object sender, EventArgs e)
+        {
+            MessageBox.Show("ぱん");
+        }
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("最近寒いね");
+            MessageBox.Show("ぽん");
         }
     }
 }
