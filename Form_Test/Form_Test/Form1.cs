@@ -14,6 +14,10 @@ namespace Form_Test
     {
         // constをつけると初期化時にのみ値の変更が可能になる
 
+        //private Random _rand = new Random(); // ← 追加
+
+        //public Random Rand => _rand;
+
         /// <summary>
         /// ボタンの横幅
         /// </summary>
@@ -46,7 +50,7 @@ namespace Form_Test
             _buttonArray = new TestButton[BOARD_SIZE_Y, BOARD_SIZE_X];
 
             //新しく追加
-            Random random = new Random();
+            //Random random = new Random();
 
             for (int i = 0; i < BOARD_SIZE_X; i++)
             {
@@ -60,8 +64,8 @@ namespace Form_Test
                             new Size(BUTTON_SIZE_X, BUTTON_SIZE_Y),
                             "");
                     //新しく追加
-                    bool randomA = random.Next(2) == 0;
-                    testButton.SetEnable(randomA); 
+                    //bool randomA = random.Next(2) == 0;
+                    //testButton.SetEnable(randomA); 
 
                     // 配列にボタンの参照を追加
                     _buttonArray[j, i] = testButton;
